@@ -40,7 +40,6 @@ function App() {
         logo="Teste"
         pages={["opção1", "opção2", "opção3", "opção4", "opção5"]}
         settings={['Perfil', 'Meus Cursos', 'Descobrir Cursos', 'Logout']}
-        avatarEscolhido="/static/images/avatar/2.jpg"
         funcaoCustomizada={alertTeste}
         iconeEscolhido={renderIcon}
       />

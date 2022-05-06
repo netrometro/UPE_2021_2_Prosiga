@@ -16,6 +16,18 @@ import MenuItem from '@mui/material/MenuItem';
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = (props) => {
+
+  // sempre que for usar o header precisa passar esses atributos
+  // *******************************
+  const {
+    logo,
+    pages,
+    settings,
+    funcaoCustomizada,
+    iconeEscolhido
+  } = props;
+  // *******************************
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -44,7 +56,7 @@ const ResponsiveAppBar = (props) => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            {props.logo}
+            {logo}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -76,9 +88,9 @@ const ResponsiveAppBar = (props) => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {props.pages.map((page) => (
+              {pages.map((page) => (
                 <MenuItem key={page} onClick={() => {
-                  props.funcaoCustomizada(page);
+                  funcaoCustomizada(page);
                   handleCloseNavMenu()
                 }}>
                   <Typography textAlign="center">{page}</Typography>
@@ -92,13 +104,13 @@ const ResponsiveAppBar = (props) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            {props.logo}
+            {logo}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {props.pages.map((page) => (
+            {pages.map((page) => (
               <Button
                 key={page}
-                onClick={() => props.funcaoCustomizada(page)}
+                onClick={() => funcaoCustomizada(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -109,7 +121,7 @@ const ResponsiveAppBar = (props) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                {props.iconeEscolhido()}
+                {iconeEscolhido()}
               </IconButton>
             </Tooltip>
             <Menu
@@ -128,9 +140,9 @@ const ResponsiveAppBar = (props) => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {props.settings.map((setting) => (
+              {settings.map((setting) => (
                 <MenuItem key={setting} onClick={() => {
-                  props.funcaoCustomizada(setting);
+                  funcaoCustomizada(setting);
                   handleCloseUserMenu();
                 }}>
                   <Typography textAlign="center">{setting}</Typography>
