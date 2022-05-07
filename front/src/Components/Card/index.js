@@ -10,6 +10,7 @@ export default function MultiActionAreaCard(props) {
   const {
     titulo,
     descricao,
+    acessarCurso
   } = props;
 
   return (
@@ -29,7 +30,8 @@ export default function MultiActionAreaCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="primary" variant='contained' fullWidth>
+        <Button size="small" color="primary" variant='contained' fullWidth 
+        onClick={() => acessarCurso()}>
           Acessar
         </Button>
       </CardActions>
