@@ -14,10 +14,9 @@ export default function MultiActionAreaCard(props) {
   } = props;
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card fullWidth variant='outlined' >
       <CardMedia
         component="img"
-        height="140"
         image={Upe}
         alt="green iguana"
       />
@@ -25,16 +24,14 @@ export default function MultiActionAreaCard(props) {
         <Typography gutterBottom variant="h5" component="div">
           {titulo}
         </Typography>
+        <Button size="small" color="primary" variant='contained' fullWidth
+          onClick={() => acessarCurso(titulo)}>
+          Acessar
+        </Button>
         <Typography variant="body2" color="text.secondary">
           {descricao}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small" color="primary" variant='contained' fullWidth 
-        onClick={() => acessarCurso()}>
-          Acessar
-        </Button>
-      </CardActions>
     </Card>
   );
 }
