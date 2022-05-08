@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component }  from 'react';
 import Header from './Components/Header/index';
+import Home from './Screens/Home/homepage';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from 'react-router-dom';
+import { Routes ,Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect,} from "react-router-dom";
 
 function App() {
 
@@ -17,6 +22,9 @@ function App() {
         break
       case "sobre nós":
         alert("Entrar na aba Sobre Nós")
+        break
+      case "cursos":
+        alert("Entrar na aba de Cursos")
         break
       
       // opções da direita
@@ -35,15 +43,26 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <>
+    <Router>
+      <Routes>
+        <Route exact path="/" component={<Home/>} />
+      </Routes>
+    </Router>
+    
+    <header className="App">
       <Header 
         logo="Prosiga"
-        pages={["home", "contato", "sobre nós", "opção4", "opção5"]}
+        pages={["home", "contato", "sobre nós", "cursos", "opção5"]}
         settings={['Perfil', 'Meus Cursos', 'Descobrir Cursos', 'Logout']}
         funcaoCustomizada={alertTeste}
         iconeEscolhido={renderIcon}
       />
-    </div>
+    </header>
+    <body>
+      <Home />
+    </body>
+    </>
   );
 }
 

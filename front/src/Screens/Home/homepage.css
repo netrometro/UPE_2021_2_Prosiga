@@ -1,0 +1,14 @@
+.App {
+    text-align: center;
+  }
+
+.home {
+    align-items: center;
+    justify-content: center;
+  }
+
+.home-title {
+    font-size: 45px;
+    align-items: center;
+    justify-content: center;
+}
