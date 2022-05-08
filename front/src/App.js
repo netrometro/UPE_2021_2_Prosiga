@@ -9,13 +9,13 @@ function App() {
   const alertTeste = (page) => {
     switch (page) {
       // opções do menu da esquerda
-      case "opção1":
+      case "home":
         alert("Voltar para a Home")
         break
-      case "opção2":
+      case "contato":
         alert("Entrar na aba de contato")
         break
-      case "opção3":
+      case "sobre nós":
         alert("Entrar na aba Sobre Nós")
         break
       
@@ -37,8 +37,8 @@ function App() {
   return (
     <div className="App">
       <Header 
-        logo="Teste"
-        pages={["opção1", "opção2", "opção3", "opção4", "opção5"]}
+        logo="Prosiga"
+        pages={["home", "contato", "sobre nós", "opção4", "opção5"]}
         settings={['Perfil', 'Meus Cursos', 'Descobrir Cursos', 'Logout']}
         funcaoCustomizada={alertTeste}
         iconeEscolhido={renderIcon}
