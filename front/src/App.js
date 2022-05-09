@@ -3,6 +3,8 @@ import './App.css';
 import React, { Component }  from 'react';
 import Header from './Components/Header/index';
 import Home from './Screens/Home/homepage';
+import Login from './Screens/Login/index';
+import Perfil from './Screens/Perfil/index';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
 import { Routes ,Route } from 'react-router-dom';
@@ -47,6 +49,8 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" component={<Home/>} />
+        <Route exact path="/login" component={<Login/>} />
+        <Route exact path="/perfil" component={<Perfil/>} />
       </Routes>
     </Router>
     
