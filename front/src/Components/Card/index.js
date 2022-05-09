@@ -17,7 +17,7 @@ export default function MultiActionAreaCard(props) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
-        height="140"
+        height="Upe.Height"
         image={Upe}
         alt="green iguana"
       />
