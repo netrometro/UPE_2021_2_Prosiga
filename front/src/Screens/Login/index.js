@@ -58,6 +58,19 @@ export default function SignIn() {
                             id="senha"
                             autoComplete="senha-atual"
                         />
+                        <FormControlLabel
+                            control={<Checkbox value="remeber" color="primary"/>}
+                            label="Lembrar da senha"
+                        />
+                        <Button 
+                            type="enviar"
+                            fullWidth
+                            variant="contained"
+                            sx={{mt:3, mb:2}}
+                        >
+                            Login 
+                        </Button>
+                            
                     </Box>
 
                 </Box>
