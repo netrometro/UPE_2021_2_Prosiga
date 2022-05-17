@@ -49,6 +49,39 @@ function Cursos() {
       />
       <h1>Todos os Cursos</h1>
       <hr></hr>
+      <Grid container spacing={1} columns={12}>
+        <Grid item xs={3}>
+          <Card
+            titulo="Engenharia de Software"
+            acessarCurso={alertTeste}
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Card
+            titulo="História"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Card
+            titulo="Psicologia"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Card
+            titulo="Medicina"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Card
+            titulo="Medicina"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Card
+            titulo="Medicina"
+          />
+        </Grid>
+      </Grid>
     </div>
   );
 }
