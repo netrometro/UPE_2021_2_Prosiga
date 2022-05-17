@@ -1,12 +1,17 @@
 import React from "react";
-import Button from '@mui/material/Button';
+import './App.css';
+import Header from '../../Components/Header/index';
+import Card from '../../Components/Card/index';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Grid } from '@mui/material';
 
-const Cursos = () => {
+function Cursos() {
   return (
     <div className="App">
-      <h1>Cursos vão ficar aqui</h1>
+      <h1>Todos os Cursos</h1>
+      <hr></hr>
     </div>
   );
-};
-  
+}
+
 export default Cursos;
