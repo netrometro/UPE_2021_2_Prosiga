@@ -73,3 +73,11 @@
     transform: rotate(360deg);
   }
 }
+
+.link-header {
+  color : white
+}
+
+.link-icon {
+  color : black
+}
