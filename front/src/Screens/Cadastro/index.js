@@ -1,8 +1,11 @@
 import * as React from 'react';
+import Button from '@mui/material/Button';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
-import { Avatar, Container, CssBaseline, Grid, TextField, Typography } from '@mui/material';
+import { Avatar, Container, CssBaseline, FormControlLabel, Grid, TextField, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import LockOutlined from '@mui/icons-material/LockOutlined';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 
 
@@ -78,11 +81,30 @@ return (
                                 fullWidth
                                 name="senha"
                                 label="senha"
-                                type="senha"
-                                id="senha"
-                                autoComplete="nova-senha"
+                                type="password"
+                                id="password"
+                                autoComplete="new-password"
                             />
                         </Grid>
+                        <Grid item xs={12}>
+                            <FormControlLabel
+                                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                                label="Eu quero receber mensagnes via email."
+                            />
+                        </Grid>
+                    </Grid>
+                    <Button 
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{mt:3, mb:2}}
+                    >
+                        Cadastre-se
+                    </Button>
+                    <Grid item>
+                        <Link href='#' variant="body2">
+                            Já tem uma conta? faça o Login
+                        </Link>
                     </Grid>
                 </Box>
             </Box>
