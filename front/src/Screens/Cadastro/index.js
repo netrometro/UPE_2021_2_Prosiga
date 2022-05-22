@@ -89,7 +89,7 @@ return (
                         <Grid item xs={12}>
                             <FormControlLabel
                                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                label="Eu quero receber mensagnes via email."
+                                label="Eu quero receber mensagens via email."
                             />
                         </Grid>
                     </Grid>
