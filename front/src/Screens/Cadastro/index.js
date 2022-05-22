@@ -1,5 +1,8 @@
 import * as React from 'react';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
+import { Avatar, Container, CssBaseline, Grid, TextField, Typography } from '@mui/material';
+import { Box } from '@mui/system';
+import LockOutlined from '@mui/icons-material/LockOutlined';
 
 
 
@@ -15,4 +18,75 @@ export default function Cadastro() {
             senha: data.get('senha'),
         });
     };
+
+
+return (
+    <ThemeProvider theme={theme}>
+        <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <Box
+                sx={{
+                    marginTop: 8,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                }}
+            >
+                <Avatar sx={{ m:1, bgcolor: 'secondary.main'}}>
+                    <LockOutlinedIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                    Cadastre-se
+                </Typography>
+                <Box component="form" noValidate onSubmit={handleSubmit} sx={{mt: 3}}>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6}>
+                            <TextField
+                                autoComplete="given-name"
+                                name="nome"
+                                required
+                                fullWidth
+                                id="nome"
+                                label="nome"
+                                autoFocus
+                            />    
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <TextField
+                                required
+                                fullWidth
+                                id="sobrenome"
+                                label="sobrenome"
+                                name="sobrenome"
+                                autoComplete="sobrenome"
+                            />
+
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                required
+                                fullWidth
+                                id="email"
+                                label="Endereço de email"
+                                name="email"
+                                autoComplete="email"
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                required
+                                fullWidth
+                                name="senha"
+                                label="senha"
+                                type="senha"
+                                id="senha"
+                                autoComplete="nova-senha"
+                            />
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Box>
+        </Container>
+    </ThemeProvider>
+);
 }
