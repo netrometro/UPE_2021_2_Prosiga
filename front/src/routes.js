@@ -26,7 +26,7 @@ export default function CustomRoutes() {
                 element={<Cadastro />}
             />
             <Route 
-                path="/avaliaçao"
+                path="/avaliacao"
                 element={<AvaliaçãoForm />}
             />
         </Routes>
