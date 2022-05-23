@@ -9,6 +9,28 @@ export default function AvaliaçãoForm() {
                 Avaliação
             </Typography>
             <Grid container spacing={3}>
+                <Grid item xs={12} sm={6}>
+                    <TextField
+                        required
+                        id="nome"
+                        name="nome"
+                        label="nome"
+                        fullWidth
+                        autoComplete="nome-completo"
+                        variant="standard"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <TextField
+                        required
+                        id="email"
+                        name="email"
+                        label="email"
+                        fullWidth
+                        autoComplete="email"
+                        variant="standard"
+                    />
+                </Grid>
                 <Grid item xs={12}>
                     <TextField
                         required
