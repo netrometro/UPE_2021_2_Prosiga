@@ -1,4 +1,8 @@
 import * as React from 'react';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 
 
 
@@ -86,6 +90,13 @@ export default function AvaliaçãoForm() {
                         variant="standard"
                     />
                 </Grid>
+                <Button
+                    variant="container"
+                    onClick={handleNext}
+                    sx={{mt: 3, ml: 1}}
+                >
+                    Enviar respostas
+                </Button>
             </Grid>
         </React.Fragment>
     )
