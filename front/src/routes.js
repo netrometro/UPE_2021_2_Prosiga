@@ -4,7 +4,8 @@ import AvaliaçãoForm from './Screens/Avaliaçao';
 import Cadastro from './Screens/Cadastro';
 import Cursos from './Screens/Cursos/index';
 import Home from './Screens/Home/homepage';
-import Login from './Screens/Login/index'
+import Login from './Screens/Login/index';
+import Perfil from './Screens/Perfil/index';
 
 export default function CustomRoutes() {
     return (
@@ -28,6 +29,10 @@ export default function CustomRoutes() {
             <Route 
                 path="/avaliacao"
                 element={<AvaliaçãoForm />}
+            />
+            <Route 
+                path="/perfil"
+                element={<Perfil />}
             />
         </Routes>
     );
