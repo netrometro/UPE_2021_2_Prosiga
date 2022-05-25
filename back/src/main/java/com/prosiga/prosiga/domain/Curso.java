@@ -1,4 +1,4 @@
-package com.example.prosiga.prosiga;
+package com.prosiga.prosiga.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
