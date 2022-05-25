@@ -4,13 +4,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import Upe from '../../Assets/upe-vector.png'
 
 export default function MultiActionAreaCard(props) {
   const {
     titulo,
     descricao,
-    acessarCurso
+    acessarCurso,
+    imagem
   } = props;
 
   return (
@@ -18,7 +18,7 @@ export default function MultiActionAreaCard(props) {
       <CardMedia
         component="img"
         height="140"
-        image={Upe}
+        image={imagem}
         alt="green iguana"
       />
       <CardContent>

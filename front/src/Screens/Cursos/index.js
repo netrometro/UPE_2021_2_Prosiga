@@ -4,6 +4,7 @@ import Header from '../../Components/Header/index';
 import Card from '../../Components/Card/index';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Grid } from '@mui/material';
+import Upe from '../../Assets/upe-vector.png'
 
 function Cursos() {
 
@@ -54,31 +55,37 @@ function Cursos() {
           <Card
             titulo="Engenharia de Software"
             acessarCurso={alertTeste}
+            imagem={Upe}
           />
         </Grid>
         <Grid item xs={3}>
           <Card
             titulo="História"
+            imagem={Upe}
           />
         </Grid>
         <Grid item xs={3}>
           <Card
             titulo="Psicologia"
+            imagem={Upe}
           />
         </Grid>
         <Grid item xs={3}>
           <Card
             titulo="Medicina"
+            imagem={Upe}
           />
         </Grid>
         <Grid item xs={3}>
           <Card
             titulo="Medicina"
+            imagem={Upe}
           />
         </Grid>
         <Grid item xs={3}>
           <Card
             titulo="Medicina"
+            imagem={Upe}
           />
         </Grid>
       </Grid>
