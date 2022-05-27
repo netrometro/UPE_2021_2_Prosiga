@@ -57,9 +57,10 @@ const Sobre = () => {
           <div>
             <span className="home-title">Sobre nós</span>
             <br></br>
-            <span className="home-text"> Somos alunos da cadeira de gerência de configuração,
-             do curso de Engenharia de Softaware na UPE do campus Garanhuns. </span>
-            <br></br>
+            <div className="Sobre">
+                <span className="home-text"> Somos alunos da cadeira de gerência de configuração,
+                do curso de Engenharia de Softaware na UPE do campus Garanhuns. </span>
+            </div>
           </div>
       </div>
     </div>
