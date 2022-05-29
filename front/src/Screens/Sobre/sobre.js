@@ -1,11 +1,12 @@
 import React from "react";
 import Button from '@mui/material/Button';
-import './homepage.css';
+import './sobre.css';
 import Header from '../../Components/Header/index';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import {Link} from 'react-router-dom'
-  
-const Home = () => {
+
+const Sobre = () => {
+
   // função customizada de exemplo
   const alertTeste = (page) => {
     switch (page) {
@@ -52,17 +53,19 @@ const Home = () => {
         iconeEscolhido={renderIcon}
       />
 
-      <div className="home">
-        <span className="home-title">Bem vindo(a) ao Prosiga!</span>
-        <span className="home-subtitle">Escolha o seu curso e comece a estudar agora mesmo</span>
-        <Link to="/login" style={{ textDecoration: 'none' }}>
-          <Button variant="contained" size="large">Login / Cadastro</Button>
-        </Link>
-        <span className="home-text">Assista as aulas, faça atividades e acompanhe suas notas de uma forma mais fácil e de onde quiser</span>
-      
+      <div className="Sobre">
+          <div>
+            <span className="home-title">Sobre nós</span>
+            <br></br>
+            <div className="Sobre">
+                <span className="home-text"> Somos alunos da cadeira de gerência de configuração,
+                do curso de Engenharia de Softaware na UPE do campus Garanhuns. </span>
+            </div>
+          </div>
       </div>
     </div>
   );
+
 };
-  
-export default Home;
+
+export default Sobre;
