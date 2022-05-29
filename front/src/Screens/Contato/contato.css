@@ -7,6 +7,16 @@
     justify-content: center;
   }
 
+.Sobre {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .home-title {
     color: #020432;
     font-size: 50px;
@@ -37,11 +47,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -65,15 +70,6 @@
   justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .link-header {
   color : white
 }
@@ -81,3 +77,4 @@
 .link-icon {
   color : black
 }
+    
