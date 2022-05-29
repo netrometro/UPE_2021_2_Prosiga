@@ -45,7 +45,7 @@ const Sobre = () => {
         logo="Prosiga"
         pages={[<Link to="/" className="link-header" style={{ textDecoration: 'none'}}>Home</Link>,
           <Link to="/contato" className="link-header" style={{ textDecoration: 'none' }}>Contato</Link>,
-          <Link to="sobre" className="link-header" style={{ textDecoration: 'none' }}>Sobre nós</Link>, "", ""]}
+          <Link to="/sobre" className="link-header" style={{ textDecoration: 'none' }}>Sobre nós</Link>, "", ""]}
         settings={[<Link to="/perfil" className="link-icon" style={{ textDecoration: 'none'}}>Perfil</Link>,
           <Link to="/cursos" className="link-icon" style={{ textDecoration: 'none'}}>Meus Cursos</Link>,
           'Descobrir Cursos', 'Logout']}
