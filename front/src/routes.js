@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import AvaliaçãoForm from './Screens/Avaliaçao';
+import AvaliaçãoForm from './Screens/Avaliaçao/aluno-form';
+import ProfessorForm from './Screens/Avaliaçao/prof-form';
 import Cadastro from './Screens/Cadastro';
 import Cursos from './Screens/Cursos/index';
 import Home from './Screens/Home/homepage';
@@ -32,6 +33,7 @@ export default function CustomRoutes() {
                 path="/avaliacao"
                 element={<AvaliaçãoForm />}
             />
+<<<<<<< HEAD
             <Route
                 path="/perfil" 
                 element={<Perfil />}
@@ -43,6 +45,11 @@ export default function CustomRoutes() {
             <Route 
                 path="/sobre" 
                 element={<Sobre />}
+=======
+            <Route 
+                path="/professorform"
+                element={<ProfessorForm />}
+>>>>>>> marx-tela-avaliacao
             />
         </Routes>
     );
