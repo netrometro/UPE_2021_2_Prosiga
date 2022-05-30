@@ -33,7 +33,6 @@ export default function CustomRoutes() {
                 path="/avaliacao"
                 element={<AvaliaçãoForm />}
             />
-<<<<<<< HEAD
             <Route
                 path="/perfil" 
                 element={<Perfil />}
@@ -45,11 +44,10 @@ export default function CustomRoutes() {
             <Route 
                 path="/sobre" 
                 element={<Sobre />}
-=======
+            />
             <Route 
                 path="/professorform"
                 element={<ProfessorForm />}
->>>>>>> marx-tela-avaliacao
             />
             <Route
                 path="/perfil" 
