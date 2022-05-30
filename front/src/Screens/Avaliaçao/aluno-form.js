@@ -12,7 +12,9 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 
-export default function AvaliaçãoForm() {
+export default function Avaliaçãoform(props) {
+
+    const {pergunta1, pergunta2, pergunta3, pergunta4, pergunta5} = props
     
     const [activeStep, setActiveStep] = React.useState(0);
 
