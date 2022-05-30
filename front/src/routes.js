@@ -51,6 +51,18 @@ export default function CustomRoutes() {
                 element={<ProfessorForm />}
 >>>>>>> marx-tela-avaliacao
             />
+            <Route
+                path="/perfil" 
+                element={<Perfil />}
+            />
+            <Route 
+                path="/contato" 
+                element={<Contato />}
+            />
+            <Route 
+                path="/sobre" 
+                element={<Sobre />}
+            />
         </Routes>
     );
 };
