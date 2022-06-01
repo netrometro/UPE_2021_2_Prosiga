@@ -10,7 +10,7 @@ function Cursos() {
   const { cursos, setCursos } = useState([]);
 
   useEffect(() => {
-    const url = 'https://127.0.0.1:8080/api/cursos'
+    const url = 'https://127.0.0.1:8080/api/cursos';
     fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -37,67 +37,39 @@ function Cursos() {
         alert("Acessar a página de perfil")
         break
       case "Meus Cursos":
-        alert("Ver seus cursos")
-        break
+        alert("Ver seus cursos");
+        break;
       default:
-        alert(page)
+        alert(page);
     }
-  }
+  };
 
   // função de ícone da sua escolha
   const renderIcon = () => {
-    return <AccountCircleIcon />
-  }
+    return <AccountCircleIcon />;
+  };
 
   return (
     <div className="App">
       <Header
         logo="Teste"
         pages={["opção1", "opção2", "opção3", "opção4", "opção5"]}
-        settings={['Perfil', 'Meus Cursos', 'Descobrir Cursos', 'Logout']}
+        settings={["Perfil", "Meus Cursos", "Descobrir Cursos", "Logout"]}
         funcaoCustomizada={alertTeste}
         iconeEscolhido={renderIcon}
       />
       <h1>Todos os Cursos</h1>
       <hr></hr>
       <Grid container spacing={1} columns={12}>
-        <Grid item xs={3}>
-          <Card
-            titulo="Engenharia de Software"
-            acessarCurso={alertTeste}
-            imagem={Upe}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Card
-            titulo="História"
-            imagem={Upe}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Card
-            titulo="Psicologia"
-            imagem={Upe}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Card
-            titulo="Medicina"
-            imagem={Upe}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Card
-            titulo="Medicina"
-            imagem={Upe}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Card
-            titulo="Medicina"
-            imagem={Upe}
-          />
-        </Grid>
+        {cursos.map((curso) => (
+          <Grid item xs={3}>
+            <Card
+              titulo={curso.titulo}
+              acessarCurso={alertTeste}
+              imagem={Upe}
+            />
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
