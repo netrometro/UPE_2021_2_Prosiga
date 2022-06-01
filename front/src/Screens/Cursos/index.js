@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './App.css';
 import Header from '../../Components/Header/index';
 import Card from '../../Components/Card/index';
@@ -7,6 +7,16 @@ import { Grid } from '@mui/material';
 import Upe from '../../Assets/upe-vector.png'
 
 function Cursos() {
+  const { cursos, setCursos } = useState([]);
+
+  useEffect(() => {
+    const url = 'https://127.0.0.1:8080/api/cursos'
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      setCursos(data)
+    })
+  }, [])
 
   // função customizada de exemplo
   const alertTeste = (page) => {
