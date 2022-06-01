@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import AvaliaçãoForm from './Screens/Avaliaçao';
+import AvaliaçãoForm from './Screens/Avaliaçao/aluno-form';
+import ProfessorForm from './Screens/Avaliaçao/prof-form';
 import Cadastro from './Screens/Cadastro';
 import Cursos from './Screens/Cursos/index';
 import Home from './Screens/Home/homepage';
 import Login from './Screens/Login/index'
+import Perfil from './Screens/Perfil/index'
+import Contato from './Screens/Contato/contato'
+import Sobre from './Screens/Sobre/sobre'
 
 export default function CustomRoutes() {
     return (
@@ -28,6 +32,34 @@ export default function CustomRoutes() {
             <Route 
                 path="/avaliacao"
                 element={<AvaliaçãoForm />}
+            />
+            <Route
+                path="/perfil" 
+                element={<Perfil />}
+            />
+            <Route 
+                path="/contato" 
+                element={<Contato />}
+            />
+            <Route 
+                path="/sobre" 
+                element={<Sobre />}
+            />
+            <Route 
+                path="/professorform"
+                element={<ProfessorForm />}
+            />
+            <Route
+                path="/perfil" 
+                element={<Perfil />}
+            />
+            <Route 
+                path="/contato" 
+                element={<Contato />}
+            />
+            <Route 
+                path="/sobre" 
+                element={<Sobre />}
             />
         </Routes>
     );
