@@ -5,6 +5,7 @@ import Card from '../../Components/Card/index';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Grid } from '@mui/material';
 import Upe from '../../Assets/upe-vector.png'
+import {Link} from 'react-router-dom'
 
 function Cursos() {
   const { cursos, setCursos } = useState([]);
@@ -22,25 +23,31 @@ function Cursos() {
   const alertTeste = (page) => {
     switch (page) {
       // opções do menu da esquerda
-      case "opção1":
-        alert("Voltar para a Home")
-        break
-      case "opção2":
-        alert("Entrar na aba de contato")
-        break
-      case "opção3":
-        alert("Entrar na aba Sobre Nós")
-        break
-
+      case "Home":
+        //alert("Voltar para a Home")
+        //break
+        return <Link to="/"></Link>
+      case "Contato":
+        //alert("Entrar na aba de contato")
+        //break
+        return <Link to="/contato"></Link>
+      case "Sobre Nós":
+        //alert("Entrar na aba Sobre Nós")
+        //break
+        return <Link to="/sobre"></Link>
+      case "Minhas aulas":
+        return <Link to="/aula"></Link>
+      
       // opções da direita
       case "Perfil":
-        alert("Acessar a página de perfil")
-        break
+        // alert("Acessar a página de perfil")
+        // break
+        return <Link to="/perfil"></Link>
       case "Meus Cursos":
-        alert("Ver seus cursos");
-        break;
-      default:
-        alert(page);
+        // alert("Ver seus cursos")
+        // break
+        return <Link to="/cursos"></Link>
+        
     }
   };
 
@@ -51,10 +58,15 @@ function Cursos() {
 
   return (
     <div className="App">
-      <Header
-        logo="Teste"
-        pages={["opção1", "opção2", "opção3", "opção4", "opção5"]}
-        settings={["Perfil", "Meus Cursos", "Descobrir Cursos", "Logout"]}
+      <Header 
+        logo="Prosiga"
+        pages={[<Link to="/" className="link-header" style={{ textDecoration: 'none'}}>Home</Link>,
+          <Link to="/contato" className="link-header" style={{ textDecoration: 'none' }}>Contato</Link>,
+          <Link to="/sobre" className="link-header" style={{ textDecoration: 'none' }}>Sobre nós</Link>, 
+          <Link to="/aula" className="link-header" style={{ textDecoration: 'none' }}>Minhas aulas</Link>, ""]}
+        settings={[<Link to="/perfil" className="link-icon" style={{ textDecoration: 'none'}}>Perfil</Link>,
+          <Link to="/cursos" className="link-icon" style={{ textDecoration: 'none'}}>Meus Cursos</Link>,
+          'Descobrir Cursos', 'Logout']}
         funcaoCustomizada={alertTeste}
         iconeEscolhido={renderIcon}
       />

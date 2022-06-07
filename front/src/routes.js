@@ -9,6 +9,7 @@ import Login from './Screens/Login/index'
 import Perfil from './Screens/Perfil/index'
 import Contato from './Screens/Contato/contato'
 import Sobre from './Screens/Sobre/sobre'
+import Aula from './Screens/Aula/aula'
 
 export default function CustomRoutes() {
     return (
@@ -58,8 +59,8 @@ export default function CustomRoutes() {
                 element={<Contato />}
             />
             <Route 
-                path="/sobre" 
-                element={<Sobre />}
+                path='/aula'
+                element={<Aula />}
             />
         </Routes>
     );
