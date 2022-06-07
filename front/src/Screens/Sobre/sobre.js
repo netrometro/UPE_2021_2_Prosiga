@@ -23,14 +23,19 @@ const Sobre = () => {
         //alert("Entrar na aba Sobre Nós")
         //break
         return <Link to="/sobre"></Link>
+      case "Minhas aulas":
+        return <Link to="/aula"></Link>
       
       // opções da direita
       case "Perfil":
-        alert("Acessar a página de perfil")
-        break
+        // alert("Acessar a página de perfil")
+        // break
+        return <Link to="/perfil"></Link>
       case "Meus Cursos":
-        alert("Ver seus cursos")
-        break
+        // alert("Ver seus cursos")
+        // break
+        return <Link to="/cursos"></Link>
+        
     }
   }
 
@@ -45,7 +50,8 @@ const Sobre = () => {
         logo="Prosiga"
         pages={[<Link to="/" className="link-header" style={{ textDecoration: 'none'}}>Home</Link>,
           <Link to="/contato" className="link-header" style={{ textDecoration: 'none' }}>Contato</Link>,
-          <Link to="/sobre" className="link-header" style={{ textDecoration: 'none' }}>Sobre nós</Link>, "", ""]}
+          <Link to="/sobre" className="link-header" style={{ textDecoration: 'none' }}>Sobre nós</Link>, 
+          <Link to="/aula" className="link-header" style={{ textDecoration: 'none' }}>Minhas aulas</Link>, ""]}
         settings={[<Link to="/perfil" className="link-icon" style={{ textDecoration: 'none'}}>Perfil</Link>,
           <Link to="/cursos" className="link-icon" style={{ textDecoration: 'none'}}>Meus Cursos</Link>,
           'Descobrir Cursos', 'Logout']}

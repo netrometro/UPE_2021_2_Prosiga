@@ -1,11 +1,11 @@
 import React from "react";
 import Button from '@mui/material/Button';
-import './homepage.css';
+import './aula.css';
 import Header from '../../Components/Header/index';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import {Link} from 'react-router-dom'
   
-const Home = () => {
+const Aula = () => {
   // função customizada de exemplo
   const alertTeste = (page) => {
     switch (page) {
@@ -60,15 +60,12 @@ const Home = () => {
 
       <div className="home">
         <span className="home-title">Bem vindo(a) ao Prosiga!</span>
-        <span className="home-subtitle">Escolha o seu curso e comece a estudar agora mesmo</span>
-        <Link to="/login" style={{ textDecoration: 'none' }}>
-          <Button variant="contained" size="large">Login / Cadastro</Button>
-        </Link>
-        <span className="home-text">Assista as aulas, faça atividades e acompanhe suas notas de uma forma mais fácil e de onde quiser</span>
+        <span className="home-subtitle">Tela de aula</span>
+        <span className="home-text">Tela de aula</span>
       
       </div>
     </div>
   );
 };
   
-export default Home;
+export default Aula;
